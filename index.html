@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Picture</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stealth Website</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      color: #ffffff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      letter-spacing: 8px;
+      color: #00ff88;
+      text-transform: uppercase;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88, 0 0 40px #00ff88;
+      }
+      50% {
+        text-shadow: 0 0 20px #00ff88, 0 0 30px #00ff88, 0 0 40px #00ff88, 0 0 50px #00ff88;
+      }
+      100% {
+        text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88, 0 0 40px #00ff88;
+      }
+    }
+
+    .circle {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 2px solid #00ff88;
+      animation: rotate 10s linear infinite;
+    }
+
+    .circle:nth-child(1) {
+      width: 250px;
+      height: 250px;
+      top: 50px;
+      right: 50px;
+    }
+
+    .circle:nth-child(2) {
+      width: 350px;
+      height: 350px;
+      bottom: 50px;
+      left: 50px;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <img src="mypicture.jpg" alt="A description of your picture" style="max-width:100%;">
+  <h1>Stealth</h1>
+  <div class="circle"></div>
+  <div class="circle"></div>
 </body>
 </html>
